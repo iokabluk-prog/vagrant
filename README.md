@@ -81,7 +81,13 @@ ubuntuadmin@WS01:/mnt/c/vagrant_projects/my_vm/vagrant$ vagrant box add  ubuntu-
 # Создаем каталог  ~/vagrant_project/vagrant
 ubuntuadmin@WS01:/mnt/c/vagrant_projects/my_vm/vagrant$ mkdir ~/vagrant_project/vagrant
 # Скопировать проект в WSL
-ubuntuadmin@WS01:/mnt/c/vagrant_projects/my_vm/vagrant$ cp -r /mnt/c/vagrant_projects/my_vm/vagrant_selinux_dns_problems ~/vagrant_project/vagrant/
+ubuntuadmin@WS01:/mnt/c/vagrant_projects/my_vm/vagrant$ cp -r /mnt/c/vagrant_projects/vagrant ~/vagrant_project/vagrant/
 # Перейдем в проект
 ubuntuadmin@WS01:/mnt/c/vagrant_projects/my_vm/vagrant$ cd ~/vagrant_project/vagrant/
 ubuntuadmin@WS01:~/vagrant_project/vagrant$
+ubuntuadmin@WS01:~/vagrant_project/vagrant$ vagrant box list
+almalinux/9        (virtualbox, 0, (amd64))
+almalinux/9        (virtualbox, 1.0.0)
+hashicorp/bionic64 (virtualbox, 0, (amd64))
+ubuntu-jammy64     (virtualbox, 0)
+ubuntu/jammy64     (virtualbox, 20241002.0.0)
