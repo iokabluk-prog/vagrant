@@ -4,6 +4,7 @@
 # Скачиваем box для Ubuntu 22.04 https://app.vagrantup.com/ubuntu/boxes/jammy64/versions/20241002.0.0/providers/virtualbox.box
 # Создаем на хостовой машине папку C:\vagrant_projects\my_vm\vagrant\vagrant,  копируем в нее box 
 # Создаем Vagrantfile 
+
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/jammy64"
   config.vm.box_url = "file://C:/vagrant_projects/my_vm/vagrant/vagrant/ubuntu-jammy64.box"
