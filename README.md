@@ -279,4 +279,23 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/sdd1       988M   24K  921M   1% /mnt/disk2
 tmpfs            96M  4.0K   96M   1% /run/user/1000
 vagrant@ubuntu10:~$
+# Скриншот вывода команды df -h из ВМ
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c6162e9e-ff83-4764-843e-ffd942547874" />
+# Скриншот проверки проброса порта на хостовой ВМ
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/09fb7923-376d-438e-85fd-84861dc3131f" />
+PS C:\vagrant_projects\my_vm\vagrant\vagrant> Get-NetTCPConnection -LocalPort 8080 | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, OwningProcess
+
+
+LocalAddress  : 0.0.0.0
+LocalPort     : 8080
+RemoteAddress : 0.0.0.0
+RemotePort    : 0
+State         : Listen
+OwningProcess : 12980
+
+
+
+PS C:\vagrant_projects\my_vm\vagrant\vagrant> netstat -ano | findstr 8080
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       12980
+
 
